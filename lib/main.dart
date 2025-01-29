@@ -1,7 +1,19 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+      apiKey: "AIzaSyAx9PVAHmBT3_74gJvZHf_XsnDEZIDYFUo",
+      authDomain: "cicd-demo-app-4d6d7.firebaseapp.com",
+      projectId: "cicd-demo-app-4d6d7",
+      storageBucket: "cicd-demo-app-4d6d7.firebasestorage.app",
+      messagingSenderId: "704709888714",
+      appId: "1:704709888714:web:9a3f992203a7e93bccc233"
+    ),
+  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
